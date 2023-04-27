@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import requests from '../api/Requests';
+import requests from '../';
 
 const Main = () => {
   const [movies, setMovies] = useState([]);
@@ -12,7 +12,7 @@ const Main = () => {
       setMovies(response.data.results);
     });
   }, []);
-
+  //   console.log(movie);
 
   const truncateString = (str, num) => {
     if (str?.length > num) {
